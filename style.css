@@ -1,0 +1,236 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* LAYOUT */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #e3e3e3;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    line-height: 70px;
+    color: white;
+    background-color: #333;
+}
+
+main {
+    width: 800px;
+    height: 450px;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 50px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    font-size: 15px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    line-height: 25px;
+    text-align: center;
+}
+
+#wrapper {
+    display: flex;
+}
+
+nav  {
+    list-style: none;
+    display: flex;
+}
+
+
+/* CANVAS */
+
+#canvas {
+    width: 480px;
+    height: 400px;
+}
+
+#canvas1, #canvas2 {
+    border: 1px solid grey;
+    cursor: crosshair;
+    position: absolute;
+}
+
+#canvas2 {
+    position: absolute;
+    z-index: 100;
+}
+
+
+/* SETTINGS */
+
+#settings1 {
+    width: 160px;
+    height: 450px;
+    position: relative;
+}
+
+#undo, #redo {
+    width: 80px;
+    text-align: center;
+    font-size: 50px;
+    height: 51px;
+    margin: 0;
+    background-color: grey;
+    color: black;
+    cursor: pointer;
+}
+
+#undo:hover, #redo:hover {
+    color: coral;
+}
+
+#save {
+    position: absolute;
+    bottom: 0;
+}
+
+#saveBtn {
+    background-color: greenyellow;
+}
+
+#saveBtn:hover {
+    background-color: lawngreen;
+}
+
+#files {
+    list-style: none;
+    height: 250px;
+    overflow: auto;
+}
+
+#files li {
+    padding: 5px 15px;
+    border-top: 1px solid grey;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+#settings2 {
+    position: relative;
+    width: 160px;
+    height: 450px;
+}
+
+#settings2 nav li {
+    height: 51px;
+    width: 160px;
+    background-color: gray;
+}
+
+p {
+    margin: 15px 5px 2px 5px;
+}
+
+#colors {
+    display: flex;
+}
+
+#colors div {
+    width: 80px;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 80px;
+	height: 50px;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+	border: 1px solid grey;
+    border-left: none;
+}
+
+input[type="text"] {
+    width: 160px;
+    font-size: 15px;
+    padding: 2px;
+}
+
+#backgroundColor {
+    width: 160px;
+}
+
+input[type="range"] {
+    width: 160px;
+}
+
+input[type="file"] {
+    width: 160px;
+    overflow: hidden;
+}
+
+.demo {
+    width: 55px;
+}
+
+.btn {
+    width: 160px;
+    background-color: grey;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+#delete {
+    bottom: 0;
+    position: absolute;
+    background-color: #ff6767;
+}
+
+#delete:hover {
+    background-color: red;
+}
+
+
+
+/* TOOLS */
+
+.tool {
+    width: 60px;
+    height: 50px;
+    font-size: 40px;
+    line-height: 50px;
+    background-color: lightgrey;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    transition: 200ms;
+    border-left: 1px solid grey;
+}
+
+#tools li:hover {
+    color: coral;
+}
+
+.active {
+    background-color: coral !important;
+    color: white !important;
+}
