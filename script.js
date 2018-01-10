@@ -75,7 +75,7 @@ function changeTool() {
 
 
 // bruker displayList til å tegne alle objekt
-function drawCanvas() {
+function renderCanvas() {
     ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
     
@@ -210,7 +210,7 @@ function mouseUp(evt) {
     }
         
     displayList.push(layer);
-    drawCanvas();
+    renderCanvas();
 }
 
 
@@ -231,14 +231,14 @@ function getLineWidth() {
 function undo() {
     if (displayList.length > 0) {
         log.unshift(displayList.pop());
-        drawCanvas();
+        renderCanvas();
     }   
 }
 
 function redo() {
     if (log.length > 0) {
         displayList.push(log.shift());
-        drawCanvas();
+        renderCanvas();
     }
 }
 
@@ -336,5 +336,5 @@ function openFile(name) {
     console.log(this.id);
         
     displayList = JSON.parse(localStorage.getItem(name));
-    drawCanvas();
+    renderCanvas();
 }
