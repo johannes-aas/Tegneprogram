@@ -38,11 +38,7 @@ function winInit(){
     canvas2.width = canvasWidth;
     canvas2.height = canvasHeight;
     ctx2 = canvas2.getContext("2d");
-    
-    var boundingRect = canvas2.getBoundingClientRect();
-    canvasTop = boundingRect.top;
-    canvasLeft = boundingRect.left;
-    
+
     canvas2.onmousedown = mouseDown;
 	canvas2.onmouseup = mouseUp;
     
@@ -56,6 +52,9 @@ function winInit(){
     document.getElementById("delete").onclick = deleteDrawing;
     document.getElementById("saveBtn").onclick = saveDrawing;
     
+    mousePosition();
+    window.onresize = mousePosition;
+
     initTools();
     fileList();
 }
@@ -73,8 +72,12 @@ function changeTool() {
     currentTool = this.attributes["tool"].value;
 }
 
+function mousePosition() {
+    var boundingRect = canvas2.getBoundingClientRect();
+    canvasTop = boundingRect.top;
+    canvasLeft = boundingRect.left;
+}
 
-// bruker displayList til å tegne alle objekt
 function renderCanvas() {
     ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
