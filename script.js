@@ -9,17 +9,6 @@
 //   Y88b..d88P  "Y88P"  88    88 "Y88P"Y8b 88     88 88     88  "Y888P  "888P"      d8P          Y8b "Y88P"Y8b "888P"
 //    "Y88888"                                                                      d8P            Y8b
 
-// To do list:
-//
-// kunne slette filer
-// kunne endre navn på filer
-// dersom filen du prøver å lagre har navn med en fil som finnes fra før spør om å erstatte
-// floppydisk lagreknapp
-// lage buer ved bruk av ekstremalpunkt
-// kunne endre tykkelse, farge osv på lag
-// kunne slatte lag
-// kunne flytte lag frem eller tilbake i rekken
-
 
 // prints "Made by Aas"
 console.log('Made by\n\n       d88b\n      d8PY8b\n     d8P  Y8b      d8888b    .d888\n    d8P    Y8b         Y88  d8P\n   d8888888888b   .d888b88   "88b.\n  d8P        Y8b  88   "88      d8P\n d8P          Y8b "Y88P"Y8b "888P"\nd8P            Y8b');
