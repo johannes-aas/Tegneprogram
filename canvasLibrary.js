@@ -59,11 +59,10 @@ function drawFilledRect(ctx, x, y, x2, y2, lineWidth, lineColor, fillColor) {
 function drawTriangle(ctx, x, y, x2, y2, lineWidth, lineColor) {
     ctx.beginPath();
     ctx.strokeStyle = lineColor;
-    ctx.moveTo(x, y + (y2 - y));
-    ctx.lineTo(x2, y2);
-    ctx.lineTo(x + ((x2 - x) / 2), y);
-    ctx.lineTo(x + ((x2 - x) / 2), y)
-    ctx.lineTo(x, y + (y2 - y));
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + ((x2 - x) / 2), y2);
+    ctx.lineTo(x2, y);
+    ctx.lineTo(x, y);
     ctx.lineWidth = lineWidth;
     ctx.stroke();
 }

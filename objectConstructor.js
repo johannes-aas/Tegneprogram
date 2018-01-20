@@ -10,8 +10,8 @@
 //    "Y88888"                                                                      d8P            Y8b
 
 
-function line(x, y, x2, y2, lineWidth, lineColor) {
-    this.type = currentTool;
+function line(type, x, y, x2, y2, lineWidth, lineColor) {
+    this.type = type;
     this.x = x;
     this.y = y;
     this.x2 = x2;
@@ -20,18 +20,18 @@ function line(x, y, x2, y2, lineWidth, lineColor) {
     this.lineColor = lineColor;
 }
 
-function freeDrawing(x, y, xPoints, yPoints, lineWidth, lineColor) {
-    this.type = currentTool;
+function freeDrawing(type, x, y, xPoints, yPoints, lineWidth, lineColor) {
+    this.type = type;
     this.x = x;
     this.y = y;
-    this.xPoints = xPoints;
-    this.yPoints = yPoints;
+    this.x2 = xPoints;
+    this.y2 = yPoints;
     this.lineWidth = lineWidth;
     this.lineColor = lineColor;
 }
 
-function circle(x, y, radius, lineWidth, lineColor) {
-    this.type = currentTool;
+function circle(type, x, y, radius, lineWidth, lineColor) {
+    this.type = type;
     this.x = x;
     this.y = y;
     this.radius = radius;
@@ -39,8 +39,8 @@ function circle(x, y, radius, lineWidth, lineColor) {
     this.lineColor = lineColor;
 }
 
-function filledCircle(x, y, radius, lineWidth, lineColor, fillColor) {
-    this.type = currentTool;
+function filledCircle(type, x, y, radius, lineWidth, lineColor, fillColor) {
+    this.type = type;
     this.x = x;
     this.y = y;
     this.radius = radius;
@@ -49,8 +49,8 @@ function filledCircle(x, y, radius, lineWidth, lineColor, fillColor) {
     this.lineWidth = lineWidth;
 }
 
-function rect(x, y, x2, y2, lineWidth, lineColor) {
-    this.type = currentTool;
+function rect(type, x, y, x2, y2, lineWidth, lineColor) {
+    this.type = type;
     this.x = x;
     this.y = y;
     this.x2 = x2;
@@ -60,8 +60,8 @@ function rect(x, y, x2, y2, lineWidth, lineColor) {
     this.lineWidth = lineWidth;
 }
 
-function filledRect(x, y, x2, y2, lineWidth, lineColor, fillColor) {
-    this.type = currentTool;
+function filledRect(type, x, y, x2, y2, lineWidth, lineColor, fillColor) {
+    this.type = type;
     this.x = x;
     this.y = y;
     this.x2 = x2;
@@ -71,8 +71,8 @@ function filledRect(x, y, x2, y2, lineWidth, lineColor, fillColor) {
     this.lineWidth = lineWidth;
 }
 
-function triangle(x, y, x2, y2, lineWidth, lineColor) {
-    this.type = currentTool;
+function triangle(type, x, y, x2, y2, lineWidth, lineColor) {
+    this.type = type;
     this.x = x;
     this.y = y;
     this.x2 = x2;
@@ -81,8 +81,8 @@ function triangle(x, y, x2, y2, lineWidth, lineColor) {
     this.lineWidth = lineWidth;
 }
 
-function filledTriangle(x, y, x2, y2, lineWidth, lineColor, fillColor) {
-    this.type = currentTool;
+function filledTriangle(type, x, y, x2, y2, lineWidth, lineColor, fillColor) {
+    this.type = type;
     this.x = x;
     this.y = y;
     this.x2 = x2;

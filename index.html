@@ -2,7 +2,7 @@
 <html lang="no">
     <head>
 		<meta charset="utf-8" />
-		<title>Tegneprogram</title> 
+		<title>Drawing app</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script src="script.js"></script>
 		<script src="objectConstructor.js"></script>
@@ -10,7 +10,7 @@
 	</head>
 	<body>
         <header>
-            <h1>Tegneprogram</h1>
+            <h1>Drawing app</h1>
         </header>
         <main>
             <div id="wrapper">
@@ -19,12 +19,14 @@
                         <li id="undo">&#x21B6;</li>
                         <li id="redo">&#x21B7;</li>
                     </nav>
-                    <p>Filer</p>
+                    <p>Saved projects</p>
                     <ul id="files"></ul>
+                    <p>Layers</p>
+                    <ul id="layers"></ul>
                     <div id="save">
-                        <p>Lagre bilde som:</p>
+                        <p>Save as:</p>
                         <input type="text" id="name">
-                        <div id="saveBtn" class="btn">Lagre</div>
+                        <div id="saveBtn" class="btn">Save</div>
                     </div>
                 </div>
                 <div id="canvas">
@@ -45,26 +47,25 @@
                     <nav>
                         <li></li>
                     </nav>
-                    <p>Juster tykkelse</p>
+                    <p>Line width</p>
                     <input type="range" min="1" max="20" value="3" id="lineWidthInput">
-                    
                     <div id="colors">
                         <div>
-                            <p>Linjefarge</p>
+                            <p>Line color</p>
                             <input type="color" id="lineColorInput" value="#333333">
                         </div>
                         <div>
-                            <p>Fyllfarge</p>
+                            <p>Fill color</p>
                             <input type="color" id="fillColorInput" value="#ff7f50">
                         </div>
                     </div>
-                    <p>Bakgrunnsfarge</p>
+                    <p>Background color</p>
                     <input id="backgroundColor" type="color" value="#ffffff">
-                    <p>Bakgrunnsbilde &#x1f4c2;</p>
+                    <p>Background image</p>
                     <input id="backgroundInput" type="file">
                     <button class="demo" onclick="demo('demo.png')">Demo</button>
                     <button class="demo" onclick="demo('demo2.png')">Demo2</button>
-                    <div id="delete" class="btn">Ny</div>
+                    <div id="delete" class="btn">New</div>
                 </div>
             </div>
         </main>

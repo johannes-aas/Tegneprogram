@@ -112,17 +112,21 @@ nav  {
     background-color: lawngreen;
 }
 
-#files {
+#files, #layers {
     list-style: none;
-    height: 250px;
+    height: 110px;
     overflow: auto;
 }
 
-#files li {
-    padding: 5px 15px;
+#files li, #layers li {
+    padding: 3px 15px;
     border-top: 1px solid grey;
     background-color: lightgrey;
     cursor: pointer;
+}
+
+#files li:hover, #layers li:hover {
+    color: coral;
 }
 
 #settings2 {
