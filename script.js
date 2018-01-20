@@ -590,13 +590,31 @@ function selectLayer(id) {
         maxY = Math.max.apply(Math, [selectedLayer.y, selectedLayer.y2]);
     }
 
-    /*switch(selectedLayer.type) {
+    switch(selectedLayer.type) {
+        case "freeDraw" :
+            drawFree(ctx2, selectedLayer.x, selectedLayer.y, xPointsWithTravel, yPointsWithTravel, selectedLayer.lineWidth, selectedLayer.lineColor);
+            break;
         case "line" :
             drawLine(ctx2, selectedLayer.x, selectedLayer.y, selectedLayer.x2, selectedLayer.y2, selectedLayer.lineWidth, selectedLayer.lineColor);
             break;
-        case "freeDraw" :
-            drawFree(ctx2, selectedLayer.x, selectedLayer.y, selectedLayer.x2, selectedLayer.y2, selectedLayer.lineWidth, selectedLayer.lineColor);
-    }*/
+        case "rect" :
+            drawRect(ctx2, selectedLayer.x, selectedLayer.y, selectedLayer.x2, selectedLayer.y2, selectedLayer.lineWidth, selectedLayer.lineColor);
+            break;
+        case "filledRect" :
+            drawFilledRect(ctx2, selectedLayer.x, selectedLayer.y, selectedLayer.x2, selectedLayer.y2, selectedLayer.lineWidth, selectedLayer.lineColor, selectedLayer.fillColor);
+            break;
+        case "circle" :
+            drawCircle(ctx2, selectedLayer.x, selectedLayer.y, selectedLayer.radius, selectedLayer.lineWidth, selectedLayer.lineColor);
+            break;
+        case "filledCircle" :
+            drawFilledCircle(ctx2, selectedLayer.x, selectedLayer.y, selectedLayer.radius, selectedLayer.lineWidth, selectedLayer.lineColor, selectedLayer.fillColor);
+            break;
+        case "triangle" :
+            drawTriangle(ctx2, selectedLayer.x, selectedLayer.y, selectedLayer.x2, selectedLayer.y2, selectedLayer.lineWidth, selectedLayer.lineColor);
+            break;
+        case "filledTriangle" :
+            drawFilledTriangle(ctx2, selectedLayer.x, selectedLayer.y, selectedLayer.x2, selectedLayer.y2, selectedLayer.lineWidth, selectedLayer.lineColor, selectedLayer.fillColor);
+    }
     ctx2.setLineDash([10, 5]);
     drawFilledRect(ctx2, minX - 10, minY - 10, maxX + 10, maxY + 10, 1, "black", "rgba(255,255,255,0.2)");
     ctx2.setLineDash([]);
